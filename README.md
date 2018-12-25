@@ -26,7 +26,7 @@ gjainLIB: A custom python module containing:
 ## Description
 The module contains functions and classes. They are:
 
-1. #### ``get_file_info():``
+1. #### ``get_file_info():`` [TOP](#Table%201%20of%201%20contents)  
 	* Get path, basename, ext, path+basename and basename+ext of a file
 	* Input parameters:
 		* ``file_name_with_path: str``  
@@ -38,7 +38,7 @@ The module contains functions and classes. They are:
 		* path_filename
 		* input_file_name
 
-1. #### ``create_dir():``
+1. #### ``create_dir():`` [TOP](#Table%201%20of%201%20contents)    
 	* Creates a directory if not exists
 	* Input parameters:
 		* ``dirname: str``  
@@ -46,7 +46,7 @@ The module contains functions and classes. They are:
 	* Returns: 
 		* Relevant status messages on error
 
-1. #### ``get_fileslist_in_dir():``
+1. #### ``get_fileslist_in_dir():`` [TOP](#Table%201%20of%201%20contents)    
 	* Get the list of files inside a directory 
 	* If extension is passed then return files for that extension
 	* Input parameters:
@@ -66,7 +66,7 @@ The module contains functions and classes. They are:
 	* Returns:
 		* None
 
-1. #### ``useful_lines():``
+1. #### ``useful_lines():`` [TOP](#Table%201%20of%201%20contents)    
 	* Skips all the comments (right now #) from the file and returns the generator object of lines without comments
 	* It remembers the state where it left. So it will start after the last executed line
 	* Input parameters:
@@ -75,7 +75,7 @@ The module contains functions and classes. They are:
 	* Returns: 
 		* generator for the last read line in the file
 
-1. #### ``get_unique_list():``
+1. #### ``get_unique_list():`` [TOP](#Table%201%20of%201%20contents)    
 	* Get unique element in a list with the order of elements preserved
 	* Input parameters:
 		* ``seq: list``  
@@ -85,7 +85,7 @@ The module contains functions and classes. They are:
 	* Returns: 
 		* generator for the unique and ordered preserved list
 
-1. #### ``get_line_counts():``
+1. #### ``get_line_counts():`` [TOP](#Table%201%20of%201%20contents)    
 	* Get the number of lines in a file efficiently
 	* Implemented with generators expressions in-line using itertools
 	* Input parameters:
@@ -94,7 +94,7 @@ The module contains functions and classes. They are:
 	* Returns: 
 		* Total number of lines in the file
 
-1. #### ``get_line_counts_pygen():``
+1. #### ``get_line_counts_pygen():`` [TOP](#Table%201%20of%201%20contents)    
 	* Get the number of lines in a file efficiently
 	* Implemented with generators expressions without using itertools
 	* Works for files as big as 100+ Gb
@@ -104,7 +104,7 @@ The module contains functions and classes. They are:
 	* Returns: 
 		* Total number of lines in the file
 
-1. #### ``get_temp_file():``
+1. #### ``get_temp_file():`` [TOP](#Table%201%20of%201%20contents)    
 	* Create a temporary file
 	* The file will be deleted at program exit
 	* Input parameters:
@@ -117,7 +117,7 @@ The module contains functions and classes. They are:
 	* Returns: 
 		* Filename with absolute path
 
-1. #### ``Log():``
+1. #### ``Log():`` [TOP](#Table%201%20of%201%20contents)    
 	* A class for saving the STDOUT output in a log file 
 	* Input parameters:
 		* ``logf: file``  
