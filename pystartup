@@ -1,0 +1,91 @@
+# Add auto-completion and a stored history file of commands to your Python
+# interactive interpreter. Requires Python 2.0+, readline. Autocomplete is
+# bound to the Esc key by default (you can change it - see readline docs).
+#
+# Store the file in ~/.pystartup, and set an environment variable to point
+# to it:  "export PYTHONSTARTUP=/home/gsf/.pystartup" in bash.
+#
+# Note that PYTHONSTARTUP does *not* expand "~", so you have to put in the
+# full path to your home directory.
+
+import atexit
+import os
+import readline
+import rlcompleter
+import sys
+import pkg_resources
+
+# Built in modules
+import argparse
+import os.path
+
+# 3rd party modules
+import textwrap
+import re
+import numpy as np
+import scipy as sp
+import pandas as pd
+import matplotlib as mp
+import matplotlib.pyplot as plt
+import subprocess
+import binascii as bi
+import scipy.stats as stats
+from collections import *
+import seaborn as sns
+
+# for looping files in a dir
+import glob
+
+# user defined modules
+from gjainPyLib import *      # import all the functions from the Gaurav`s python library
+
+### for color scale
+from  matplotlib import colors
+from itertools import cycle, islice # barplot colors
+
+### Modeling related ###
+from sklearn import metrics
+#from scipy.stats.stats import nanmean
+from sklearn.linear_model import LinearRegression
+from time import time
+from operator import itemgetter
+from scipy.stats import randint as sp_randint
+import statsmodels.api as sm
+
+# Set to classic matplotlib style
+# more styles: https://tonysyu.github.io/raw_content/matplotlib-style-gallery/gallery.html
+plt.style.use('classic')
+matplotlib.rcParams['svg.fonttype']    = 'none'
+matplotlib.rcParams['pdf.fonttype']    =  42
+matplotlib.rcParams['patch.edgecolor'] = 'white'
+
+# change autocomplete to tab
+readline.parse_and_bind("tab: complete")
+
+historyPath = os.path.expanduser("/home/rad/.pyhistory")
+
+def save_history(historyPath=historyPath):
+    import readline
+    readline.write_history_file(historyPath)
+
+if os.path.exists(historyPath):
+    readline.read_history_file(historyPath)
+
+atexit.register(save_history)
+
+# anything not deleted (sys and os) will remain in the interpreter session
+del atexit, readline, rlcompleter, save_history, historyPath
+
+# initiliaze a dataframe
+df = pd.DataFrame(np.array([[1,2,3,4,5],[1,3,6,9,10],[2,3,6,8,9],[0,1,0,0,0], [1,1,0,0,0], [1,1,1,0,0]]).T, columns=['a','b','c','d','e', 'f'])
+
+# initiliaze a dataframe with index and column names
+idf = pd.DataFrame.from_dict({'A':[1, 2, 3], 'B':[4, 5, 6], 'C':[10, 20, 30], 'D':[14, 15, 16]}, orient='index', columns=['x', 'y', 'z'])
+
+# initialize a numpy array
+mat = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+# initialize a list
+l  = ['a', 'b', 'c', 'd', 'f']
+nl = [1, 2, 3, 9, 5, 10, 22, 37]
+
