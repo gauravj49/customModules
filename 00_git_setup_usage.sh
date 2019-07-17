@@ -29,7 +29,7 @@ cd <ProjectName>
 # Add the files in your new local repository. This stages them for the first commit.
 git init
 
-# Set config values
+# Set config values (Local)
 git config user.name  "Gaurav Jain"
 git config user.email "gauravj49@gmail.com"
 touch README.md
