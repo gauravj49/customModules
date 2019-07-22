@@ -1,7 +1,9 @@
 # pwd
 cd /home/gjain/bin/libs/gitRepos
 
-# Source: https://www.youtube.com/watch?v=HVsySz-h9r4
+# Source: 
+# 1) https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR
+# 2) https://www.youtube.com/watch?v=HVsySz-h9r4
 
 # Install or upgrade Git
 sudo add-apt-repository ppa:git-core/ppa -y
