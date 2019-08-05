@@ -30,7 +30,7 @@ import pprint as pp
 import scipy.stats as stats
 import seaborn as sns
 import pip
-import sinfo from sinfo
+from sinfo import sinfo
 
 #######################################################
 matplotlib.rcParams['svg.fonttype'] = 'none'
