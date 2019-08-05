@@ -109,6 +109,10 @@ def print_initial_arguments(parser):
     print("\n---------- Script ----------")
     print(sys.argv[0])
 
+    print("\n---------- Session info ----------")
+    print(sinfo())
+    print("*"*50)
+
     print("\n------Input Arguments ------")
     opts = vars(parser.parse_args())
     maxl = max(len(text) for text in opts.keys())
