@@ -29,8 +29,8 @@ import subprocess
 import pprint as pp
 import scipy.stats as stats
 import seaborn as sns
-import pip3
-import_or_install(sinfo)
+import pip
+import sinfo from sinfo
 
 #######################################################
 matplotlib.rcParams['svg.fonttype'] = 'none'
@@ -47,7 +47,7 @@ def import_or_install(package):
     try:
         __import__(package)
     except ImportError:
-        pip3.main(['install', '--user', package])
+        pip.main(['install', '--user', package])
 
 def get_file_info(file_name_with_path):
     ''' Get path, basename, ext, path+basename and basename+ext of a file '''
