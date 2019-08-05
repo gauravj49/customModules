@@ -4,6 +4,8 @@
 - CONTACT: Gaurav Jain(gauravj49@gmail.com)
 ***********************************************
 """
+__version_info__ = ('1', '0', '1')
+__version__      = '.'.join(__version_info__)
 
 import string
 import glob
@@ -27,11 +29,25 @@ import subprocess
 import pprint as pp
 import scipy.stats as stats
 import seaborn as sns
+import pip3
+import_or_install(sinfo)
 
 #######################################################
 matplotlib.rcParams['svg.fonttype'] = 'none'
 matplotlib.rcParams['pdf.fonttype'] = 42
 #######################################################
+
+def import_or_install(package):
+    ''' 
+     Import a package, where package is of type str, 
+     and if it is unable to, calls pip and attempt 
+     to install it from there
+     source: https://stackoverflow.com/questions/4527554/check-if-module-exists-if-not-install-it
+    '''
+    try:
+        __import__(package)
+    except ImportError:
+        pip3.main(['install', '--user', package])
 
 def get_file_info(file_name_with_path):
     ''' Get path, basename, ext, path+basename and basename+ext of a file '''
