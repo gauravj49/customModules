@@ -1,6 +1,6 @@
 """
 ***********************************************
-- PROGRAM: gjainLIBpy3.py
+- PROGRAM: gjainPyLib.py
 - CONTACT: Gaurav Jain(gauravj49@gmail.com)
 ***********************************************
 """
