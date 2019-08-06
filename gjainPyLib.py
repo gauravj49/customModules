@@ -120,6 +120,10 @@ def print_initial_arguments(parser):
         print("%-*s = %s" % (maxl, k, v))
     print("-"*29, "\n")
 
+def print_help():
+    ''' Print system help '''
+    print >> sys.stderr, "\n ----------------- HELP ------------------\n", parser.print_help(), "\n"
+
 def nanmean(data, **args):
     '''Get the means of a vector with nans'''
     return np.ma.filled(np.ma.masked_array(data,np.isnan(data)).mean(**args), fill_value=np.nan)
